@@ -1,8 +1,8 @@
 #include <stdio.h>
-#define pi 3.14159265
 int main()
 {
   float radius = 0, diameter = 0, circumference = 0, area = 0;
+  const float pi = 3.14159f;
   char state = 'n';
   char unit1 = 0, unit2 = 0;
 
@@ -32,8 +32,8 @@ int main()
            circumference =      2*radius*pi;
            area          = pi*radius*radius;
           if (unit1 == '\n'){
-            printf("\nThe circumference is %.10f%c%c.\nThe area is %.10f%c%c².\n", circumference,
-                                                                               unit2, area, unit2);
+            printf("\nThe circumference is %.10f%c.\nThe area is %.10f%c².\n",
+                                                  circumference, unit2, area, unit2);
             return 0;}
 
           else{
